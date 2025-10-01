@@ -391,7 +391,7 @@ input[type="button"]:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover {
 	background-color: var(--color-secondary);
-	transform: translateY(10px);
+	color: var(--color-primary);
 }
 
 button:focus,
@@ -526,7 +526,29 @@ caption {
 	color: var(--color-primary);
 	caption-side: bottom;
 	text-align: left;
-}</style><button class="ids-radius--8 ids-fs--18">Button</button>
+}</style>
+<sidenav>
+	<drawer hidden class="ids-color--red-50">
+    
+		<button type="button" data-target="slide-out">
+			<span class="material-symbols-outlined">menu</span>
+            Close Sidenav
+		</button>
+		<p>Auto-resizing sidenav</p>
+
+		<p>Lorem, ipsum dolor sit amet consectetur.</p>
+
+	</drawer>
+	<div class="example-sidenav-content">
+		<button type="button" data-target="slide-out">
+			<span class="material-symbols-outlined">menu</span>
+            Open Sidenav
+		</button>
+	</div>
+</sidenav>
+
+
+<button class="ids-radius--8 ids-fs--18">Button</button>
 
 <hr />
    
@@ -538,7 +560,9 @@ caption {
    
 <button class="disabled" aria-label="Disabled button" disabled>
     Disabled button
-</button><fieldset class="ids-radius--8 ids-fs--18 ids-padding--16 ids-margin--16">
+</button>
+
+<fieldset class="ids-radius--8 ids-fs--18 ids-padding--16 ids-margin--16">
     <legend class="ids-fs--18 ids-margin-left--8">Fieldset Legend</legend>
     <label for="input1">Input 1:</label>
     <input type="text" id="input1" name="input1" class="ids-radius--0 ids-fs--18" />
@@ -569,7 +593,8 @@ caption {
     </select>
     </label>
     <button class="ids-radius--0 ids-fs--18">Submit</button>
-</fieldset><table>
+</fieldset>
+<table>
     <thead>
         <tr>
         <th>Nom</th>
@@ -595,7 +620,6 @@ caption {
         </tr>
     </tbody>
 </table>
-
 
   <script src="/js/intranets-ds.min.js"></script>
 </body>
