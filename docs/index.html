@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="./themes/mandelbrot/css/highlight.css?cachebust=1.9.0" type="text/css">
 
 
-<title>Overview | Intranets Design System</title>
+<title>Introduction | Intranets Design System</title>
 
 </head>
 <body>
@@ -65,7 +65,7 @@
 
     <div class="Document-header">
         
-        <h1 class="Document-title">Overview</h1>
+        <h1 class="Document-title">Introduction</h1>
         
 
 
@@ -82,21 +82,142 @@
 
     
     
-    <h1>Intranets Design System</h1>
+    <h1 id="intranets-design-system">Intranets Design System</h1>
+<blockquote>
+<p>Système de design utilitaire basé sur la philosophie <strong>Atom</strong> — des classes atomiques composables pour construire n’importe quelle interface.</p>
+</blockquote>
+<hr>
+<h2 id="installation">Installation</h2>
+<h3 id="via-cdn">Via CDN</h3>
+<p>Ajouter dans le <code>&lt;head&gt;</code> de chaque page :</p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://ids.intranets.fr/css/intranets-ds.min.css&quot;</span>&gt;</span></code></pre><p>Ajouter avant <code>&lt;/body&gt;</code> :</p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://ids.intranets.fr/js/intranets-ds.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre><h3 id="via-npm">Via npm</h3>
+<pre><code class="hljs language-bash">npm install intranets-design-system</code></pre><p>Référencer dans <code>angular.json</code> ou votre bundler :</p>
+<pre><code class="hljs language-json">&quot;styles&quot;: [
+  &quot;node_modules/intranets-design-system/css/intranets-ds.min.css&quot;
+]</code></pre><hr>
+<h2 id="vue-densemble-des-composants">Vue d’ensemble des composants</h2>
+<table>
+<thead>
+<tr>
+<th>Composant</th>
+<th>Description</th>
+<th>Classes principales</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Grid</strong></td>
+<td>Grille flexbox 12/8/4 colonnes</td>
+<td><code>.ids-grid</code>, <code>.ids-cell--{n}-col</code></td>
+</tr>
+<tr>
+<td><strong>Space</strong></td>
+<td>Margin, padding, gap, border-radius</td>
+<td><code>.ids-margin--*</code>, <code>.ids-padding--*</code>, <code>.ids-gap--*</code>, <code>.ids-radius--*</code></td>
+</tr>
+<tr>
+<td><strong>Textes</strong></td>
+<td>Taille de police responsive</td>
+<td><code>.ids-fs--{taille}</code></td>
+</tr>
+<tr>
+<td><strong>Palette</strong></td>
+<td>Couleurs Material Design (fond + texte)</td>
+<td><code>.ids-color--{nom}-{teinte}</code>, <code>.ids-color-text--*</code></td>
+</tr>
+<tr>
+<td><strong>Theming</strong></td>
+<td>Styles de base &amp; tokens CSS</td>
+<td><code>--color-primary</code>, <code>--color-secondary</code>, …</td>
+</tr>
+<tr>
+<td><strong>Boutons</strong></td>
+<td>Éléments <code>&lt;button&gt;</code> natifs stylisés</td>
+<td>Via theming + utilitaires</td>
+</tr>
+<tr>
+<td><strong>Formulaires</strong></td>
+<td><code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;fieldset&gt;</code></td>
+<td>Via theming</td>
+</tr>
+<tr>
+<td><strong>Tableau</strong></td>
+<td><code>&lt;table&gt;</code> natif stylisé</td>
+<td>Via theming</td>
+</tr>
+<tr>
+<td><strong>Sidenav</strong></td>
+<td>Navigation latérale animée CSS</td>
+<td><code>&lt;sidenav&gt;</code>, <code>&lt;drawer&gt;</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="breakpoints">Breakpoints</h2>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Largeur min</th>
+<th>Colonnes</th>
+<th>Suffixe de classe</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Phone</td>
+<td>—</td>
+<td>4</td>
+<td><code>-phone</code></td>
+</tr>
+<tr>
+<td>Tablet</td>
+<td>480px</td>
+<td>8</td>
+<td><code>-tablet</code></td>
+</tr>
+<tr>
+<td>Desktop</td>
+<td>840px</td>
+<td>12</td>
+<td><code>-desktop</code></td>
+</tr>
+</tbody></table>
+<p>La plupart des classes utilitaires (margin, padding, gap, font-size) acceptent un suffixe responsive :</p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--16 ids-padding--8-phone ids-padding--24-desktop&quot;</span>&gt;</span>
+  Padding adaptatif selon le breakpoint
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><hr>
+<h2 id="tokens-de-design">Tokens de design</h2>
+<p>Les couleurs sont exposées via des CSS custom properties dans <code>:root</code> :</p>
+<pre><code class="hljs language-css">--ids-<span class="hljs-attribute">color</span>--{nom}-{teinte}   <span class="hljs-comment">/* ex : --ids-color--indigo-500 */</span></code></pre><p>Le thème se personnalise en surchargeant les variables sémantiques :</p>
+<pre><code class="hljs language-css"><span class="hljs-selector-pseudo">:root</span> {
+    --<span class="hljs-attribute">color</span>-primary:   <span class="hljs-built_in">var</span>(--ids-color--indigo-A700);
+    --<span class="hljs-attribute">color</span>-secondary: <span class="hljs-built_in">var</span>(--ids-color--indigo-A100);
+    --<span class="hljs-attribute">color</span>-success:   <span class="hljs-built_in">var</span>(--ids-color--green-<span class="hljs-number">500</span>);
+    --<span class="hljs-attribute">color</span>-warning:   <span class="hljs-built_in">var</span>(--ids-color--yellow-<span class="hljs-number">500</span>);
+    --<span class="hljs-attribute">color</span>-error:     <span class="hljs-built_in">var</span>(--ids-color--red-<span class="hljs-number">500</span>);
+    --<span class="hljs-attribute">color</span>-info:      <span class="hljs-built_in">var</span>(--ids-color--blue-<span class="hljs-number">500</span>);
+}</code></pre><hr>
+<h2 id="philosophie">Philosophie</h2>
+<p>Le IDS suit une approche <strong>utilitaire atomique</strong> :</p>
+<ul>
+<li>Chaque classe fait <strong>une seule chose</strong> (margin, padding, couleur, taille…)</li>
+<li>Les composants se construisent en <strong>combinant</strong> ces classes</li>
+<li>Les styles de base (theming) s’appliquent sur les <strong>éléments natifs</strong> HTML sans classes supplémentaires</li>
+<li>Le <strong>thème</strong> se change globalement via des CSS custom properties, sans toucher au markup</li>
+</ul>
+<pre><code class="hljs language-html"><span class="hljs-comment">&lt;!-- Exemple : carte construite entièrement avec des utilitaires --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-radius--8 ids-padding--16 ids-color--grey-100&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-fs--20 ids-color-text--indigo-700&quot;</span>&gt;</span>Titre<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-fs--14 ids-margin-top--8&quot;</span>&gt;</span>Contenu de la carte.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-radius--4 ids-margin-top--16&quot;</span>&gt;</span>Action<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><hr>
+<h2 id="icônes">Icônes</h2>
+<p>Le IDS utilise <strong>Material Symbols Outlined</strong> (Google Fonts) :</p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-symbols-outlined&quot;</span>&gt;</span>favorite<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-symbols-outlined ids-fs--32&quot;</span>&gt;</span>home<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre><p>Référence complète : <a href="https://fonts.google.com/icons">fonts.google.com/icons</a></p>
+<hr>
+<p><em>Intranets Design System v2.0 — Licence Apache 2.0</em></p>
 
-<h2>Implementation</h2>
-
-<pre>
-&lt;link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"&gt;
-&lt;link media="all" rel="stylesheet" href="/css/intranets-ds.min.css"/&gt;
-</pre>
-<pre>
-&lt;script type="text/javascript" src="https://ids.intranets.fr/js/intranets-ds.min.js">&lt/script&gt;
-</pre>
-<p>angular.json</p>
-<pre>
-'../node_modules/intranets-design-system/css/intranets-ds.min.css',
-</pre>
     
 
 
@@ -493,7 +614,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2026-04-19T14:51:12.764Z">
+                            <time datetime="2026-04-19T14:58:36.221Z">
                                 19/04/2026
                             </time>
                         
