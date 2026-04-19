@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.9.0" type="text/css">
 
 
-<title>Example component: Desktop | Intranets Design System</title>
+<title>Grid: Desktop | Intranets Design System</title>
 
 </head>
 <body>
@@ -68,7 +68,7 @@
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
         <a class="Pen-previewLink" href="../preview/grid--desktop.html" title="Preview">
-            Example component: Desktop
+            Grid: Desktop
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -150,7 +150,70 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-c97cea2b746eddd7f1da55a293096935-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <p class="Browser-isEmptyNote">No notes defined.</p>
+        <h2 id="système-de-grille">Système de grille</h2>
+<p>Le grid IDS est basé sur <strong>flexbox</strong> avec 3 breakpoints.</p>
+<table>
+<thead>
+<tr>
+<th>Breakpoint</th>
+<th>Colonnes</th>
+<th>Gutter</th>
+<th>Largeur min</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Phone</td>
+<td>4</td>
+<td>16px</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Tablet</td>
+<td>8</td>
+<td>16px</td>
+<td>480px</td>
+</tr>
+<tr>
+<td>Desktop</td>
+<td>12</td>
+<td>16px</td>
+<td>840px</td>
+</tr>
+</tbody></table>
+<h3 id="utilisation">Utilisation</h3>
+<pre><code class="hljs language-html"><span class="hljs-comment">&lt;!-- Grille de base --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-grid&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-cell ids-cell--6-col&quot;</span>&gt;</span>6 colonnes<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-cell ids-cell--6-col&quot;</span>&gt;</span>6 colonnes<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Taille responsive par breakpoint --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-cell ids-cell--6-col ids-cell--8-col-tablet ids-cell--4-col-phone&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Grille sans espacement --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-grid ids-grid--no-spacing&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Masquage responsive --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-cell ids-cell--hide-desktop&quot;</span>&gt;</span>Masqué sur desktop<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-cell ids-cell--hide-tablet&quot;</span>&gt;</span>Masqué sur tablette<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-cell ids-cell--hide-phone&quot;</span>&gt;</span>Masqué sur mobile<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Offset --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-cell ids-cell--2-offset-desktop ids-cell--8-col-desktop&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Alignement vertical --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-cell ids-cell--top&quot;</span>&gt;</span>haut<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-cell ids-cell--middle&quot;</span>&gt;</span>milieu<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-cell ids-cell--bottom&quot;</span>&gt;</span>bas<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h3 id="pattern-de-nommage">Pattern de nommage</h3>
+<ul>
+<li><code>.ids-cell--{n}-col</code> — taille globale (tous breakpoints)</li>
+<li><code>.ids-cell--{n}-col-desktop</code> — desktop uniquement</li>
+<li><code>.ids-cell--{n}-col-tablet</code> — tablette uniquement</li>
+<li><code>.ids-cell--{n}-col-phone</code> — mobile uniquement</li>
+<li><code>.ids-cell--{n}-offset</code> / <code>.ids-cell--{n}-offset-desktop</code> — décalage</li>
+<li><code>.ids-cell--order-{n}</code> — ordre flex</li>
+</ul>
+
         
     </div>
 </div>
@@ -655,7 +718,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2026-04-19T13:50:10.715Z">
+                            <time datetime="2026-04-19T14:51:12.764Z">
                                 19/04/2026
                             </time>
                         
@@ -841,6 +904,32 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./palette--accent.html" data-role="tree-link" data-pjax data-handle="palette">
+                <span>Accent</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./palette--variables.html" data-role="tree-link" data-pjax data-handle="palette">
                 <span>Variables</span>
                 
@@ -996,6 +1085,32 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./space--gap.html" data-role="tree-link" data-pjax data-handle="space">
+                <span>Gap</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./space--margin.html" data-role="tree-link" data-pjax data-handle="space">
                 <span>Margin</span>
                 
@@ -1024,6 +1139,32 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./space--padding.html" data-role="tree-link" data-pjax data-handle="space">
                 <span>Padding</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./space--radius.html" data-role="tree-link" data-pjax data-handle="space">
+                <span>Radius</span>
                 
 
 <div class="Status Status--unlabelled">

@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.9.0" type="text/css">
 
 
-<title>Buttons | Intranets Design System</title>
+<title>Boutons | Intranets Design System</title>
 
 </head>
 <body>
@@ -68,7 +68,7 @@
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
         <a class="Pen-previewLink" href="../preview/buttons.html" title="Preview">
-            Buttons
+            Boutons
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -150,7 +150,29 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-64b55132bd0baca0993e9edddd2dabad-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <p class="Browser-isEmptyNote">No notes defined.</p>
+        <h2 id="boutons">Boutons</h2>
+<p>Le IDS ne fournit pas de classes <code>.ids-button--*</code> dédiées : les boutons sont stylisés via le <strong>theming</strong> (<code>theming.twig</code>) sur les éléments natifs <code>&lt;button&gt;</code>, et enrichis avec les classes utilitaires existantes.</p>
+<h3 id="variantes">Variantes</h3>
+<pre><code class="hljs language-html"><span class="hljs-comment">&lt;!-- Bouton standard --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-radius--8 ids-fs--16&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Bouton icône --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-radius--8&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Description&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-symbols-outlined ids-fs--24&quot;</span>&gt;</span>favorite<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Bouton désactivé --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">disabled</span>&gt;</span>Désactivé<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre><h3 id="personnalisation-via-theming">Personnalisation via theming</h3>
+<p>Les couleurs de fond, de texte et les états (hover, focus, disabled) sont contrôlés par les variables CSS du thème :</p>
+<pre><code class="hljs language-css"><span class="hljs-selector-pseudo">:root</span> {
+  --<span class="hljs-attribute">color</span>-primary: <span class="hljs-built_in">var</span>(--ids-color--indigo-A700);
+  --<span class="hljs-attribute">color</span>-secondary: <span class="hljs-built_in">var</span>(--ids-color--indigo-A100);
+}</code></pre><h3 id="accessibilité">Accessibilité</h3>
+<ul>
+<li>Toujours fournir un <code>aria-label</code> sur les boutons icônes.</li>
+<li>L’attribut <code>disabled</code> suffit — pas besoin de classe <code>.disabled</code>.</li>
+</ul>
+
         
     </div>
 </div>
@@ -610,7 +632,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2026-04-19T13:50:10.715Z">
+                            <time datetime="2026-04-19T14:51:12.764Z">
                                 19/04/2026
                             </time>
                         
@@ -796,6 +818,32 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./palette--accent.html" data-role="tree-link" data-pjax data-handle="palette">
+                <span>Accent</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./palette--variables.html" data-role="tree-link" data-pjax data-handle="palette">
                 <span>Variables</span>
                 
@@ -951,6 +999,32 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./space--gap.html" data-role="tree-link" data-pjax data-handle="space">
+                <span>Gap</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./space--margin.html" data-role="tree-link" data-pjax data-handle="space">
                 <span>Margin</span>
                 
@@ -979,6 +1053,32 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./space--padding.html" data-role="tree-link" data-pjax data-handle="space">
                 <span>Padding</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./space--radius.html" data-role="tree-link" data-pjax data-handle="space">
+                <span>Radius</span>
                 
 
 <div class="Status Status--unlabelled">

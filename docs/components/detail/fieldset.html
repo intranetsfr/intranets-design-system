@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.9.0" type="text/css">
 
 
-<title>Fieldset | Intranets Design System</title>
+<title>Formulaire (Fieldset) | Intranets Design System</title>
 
 </head>
 <body>
@@ -68,7 +68,7 @@
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
         <a class="Pen-previewLink" href="../preview/fieldset.html" title="Preview">
-            Fieldset
+            Formulaire (Fieldset)
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -150,7 +150,43 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-8072210df7d7e25b3c6654e9cfecc162-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <p class="Browser-isEmptyNote">No notes defined.</p>
+        <h2 id="formulaire--fieldset">Formulaire — Fieldset</h2>
+<p>Exemple de formulaire complet utilisant les éléments natifs stylisés par le theming IDS.</p>
+<h3 id="éléments-supportés">Éléments supportés</h3>
+<ul>
+<li><code>&lt;fieldset&gt;</code> / <code>&lt;legend&gt;</code></li>
+<li><code>&lt;input&gt;</code> (text, checkbox, radio)</li>
+<li><code>&lt;select&gt;</code> / <code>&lt;option&gt;</code></li>
+<li><code>&lt;textarea&gt;</code></li>
+<li><code>&lt;button&gt;</code></li>
+</ul>
+<h3 id="utilisation">Utilisation</h3>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-radius--8 ids-padding--16 ids-margin--16&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-fs--18 ids-margin-left--8&quot;</span>&gt;</span>Titre<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;nom&quot;</span>&gt;</span>Nom :<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;nom&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;nom&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-radius--4&quot;</span> /&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;accept&quot;</span> /&gt;</span>
+    J&#x27;accepte les conditions
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;choix&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;a&quot;</span> /&gt;</span> Option A
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;choix&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;b&quot;</span> /&gt;</span> Option B
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-radius--4&quot;</span>&gt;</span>Envoyer<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span></code></pre><h3 id="accessibilité">Accessibilité</h3>
+<ul>
+<li>Associer chaque <code>&lt;input&gt;</code> à un <code>&lt;label&gt;</code> via <code>for</code> / <code>id</code>.</li>
+<li>Grouper les radios et checkboxes dans un <code>&lt;fieldset&gt;</code> avec <code>&lt;legend&gt;</code>.</li>
+<li>Les états <code>disabled</code> sont gérés nativement par le theming.</li>
+</ul>
+
         
     </div>
 </div>
@@ -629,7 +665,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2026-04-19T13:50:10.715Z">
+                            <time datetime="2026-04-19T14:51:12.764Z">
                                 19/04/2026
                             </time>
                         
@@ -815,6 +851,32 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./palette--accent.html" data-role="tree-link" data-pjax data-handle="palette">
+                <span>Accent</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./palette--variables.html" data-role="tree-link" data-pjax data-handle="palette">
                 <span>Variables</span>
                 
@@ -970,6 +1032,32 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./space--gap.html" data-role="tree-link" data-pjax data-handle="space">
+                <span>Gap</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./space--margin.html" data-role="tree-link" data-pjax data-handle="space">
                 <span>Margin</span>
                 
@@ -998,6 +1086,32 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./space--padding.html" data-role="tree-link" data-pjax data-handle="space">
                 <span>Padding</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./space--radius.html" data-role="tree-link" data-pjax data-handle="space">
+                <span>Radius</span>
                 
 
 <div class="Status Status--unlabelled">

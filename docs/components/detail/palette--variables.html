@@ -150,7 +150,26 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-d4ef0beb5ffe6360896b35dedf872714-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <p class="Browser-isEmptyNote">No notes defined.</p>
+        <h2 id="palette-de-couleurs">Palette de couleurs</h2>
+<p>Le IDS expose une palette Material Design complète via des <strong>CSS custom properties</strong> et des <strong>classes utilitaires</strong>.</p>
+<h3 id="css-custom-properties">CSS custom properties</h3>
+<p>Toutes les couleurs sont disponibles en tant que variables CSS dans <code>:root</code> :</p>
+<pre><code class="hljs language-css">--ids-<span class="hljs-attribute">color</span>--{nom}-{teinte}</code></pre><p>Exemple : <code>var(--ids-color--indigo-500)</code>, <code>var(--ids-color--red-A200)</code></p>
+<p>Utilisez ces variables dans votre thème pour rester synchronisé avec la palette.</p>
+<h3 id="classes-de-fond">Classes de fond</h3>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-color--blue-500&quot;</span>&gt;</span>Fond bleu 500<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-color--blue&quot;</span>&gt;</span>Raccourci → teinte 500<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-color--black&quot;</span>&gt;</span>Fond noir<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-color--white&quot;</span>&gt;</span>Fond blanc<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h3 id="classes-de-texte">Classes de texte</h3>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-color-text--red-700&quot;</span>&gt;</span>Texte rouge 700<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-color-text--red&quot;</span>&gt;</span>Raccourci → teinte 500<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre><h3 id="teintes-disponibles">Teintes disponibles</h3>
+<ul>
+<li><strong>Standard</strong> : 50, 100, 200, 300, 400, 500, 600, 700, 800, 900</li>
+<li><strong>Accent</strong> (hors brown, grey, blue-grey) : A100, A200, A400, A700</li>
+</ul>
+<h3 id="couleurs-neutres">Couleurs neutres</h3>
+<p><code>brown</code>, <code>grey</code>, <code>blue-grey</code> — teintes 50–900 uniquement.</p>
+
         
     </div>
 </div>
@@ -1540,258 +1559,6 @@
 
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-cell ids-cell--3-col&quot;</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--brown-50&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--brown-50);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--brown-50);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--brown-50);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--brown-100&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--brown-100);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--brown-100);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--brown-100);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--brown-200&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--brown-200);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--brown-200);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--brown-200);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--brown-300&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--brown-300);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--brown-300);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--brown-300);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--brown-400&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--brown-400);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--brown-400);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--brown-400);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--brown-500&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--brown-500);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--brown-500);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--brown-500);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--brown-600&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--brown-600);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--brown-600);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--brown-600);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--brown-700&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--brown-700);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--brown-700);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--brown-700);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--brown-800&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--brown-800);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--brown-800);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--brown-800);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--brown-900&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--brown-900);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--brown-900);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--brown-900);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-cell ids-cell--3-col&quot;</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--grey-50&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--grey-50);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--grey-50);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--grey-50);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--grey-100&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--grey-100);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--grey-100);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--grey-100);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--grey-200&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--grey-200);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--grey-200);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--grey-200);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--grey-300&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--grey-300);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--grey-300);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--grey-300);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--grey-400&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--grey-400);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--grey-400);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--grey-400);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--grey-500&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--grey-500);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--grey-500);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--grey-500);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--grey-600&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--grey-600);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--grey-600);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--grey-600);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--grey-700&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--grey-700);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--grey-700);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--grey-700);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--grey-800&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--grey-800);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--grey-800);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--grey-800);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--grey-900&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--grey-900);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--grey-900);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--grey-900);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-cell ids-cell--3-col&quot;</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--blue-grey-50&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--blue-grey-50);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--blue-grey-50);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--blue-grey-50);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--blue-grey-100&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--blue-grey-100);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--blue-grey-100);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--blue-grey-100);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--blue-grey-200&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--blue-grey-200);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--blue-grey-200);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--blue-grey-200);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--blue-grey-300&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--blue-grey-300);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--blue-grey-300);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--blue-grey-300);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--blue-grey-400&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--blue-grey-400);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--blue-grey-400);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--blue-grey-400);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--blue-grey-500&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--blue-grey-500);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--blue-grey-500);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--blue-grey-500);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--blue-grey-600&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--blue-grey-600);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--blue-grey-600);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--blue-grey-600);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--blue-grey-700&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--blue-grey-700);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--blue-grey-700);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--blue-grey-700);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--blue-grey-800&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--blue-grey-800);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--blue-grey-800);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--blue-grey-800);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--8 ids-fs--8 ids-color--blue-grey-900&quot;</span>&gt;</span>
-.class{<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  background-color: var(--ids-color--blue-grey-900);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  color: var(--ids-color--blue-grey-900);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-  border-color: var(--ids-color--blue-grey-900);<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-}
-				<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -2198,7 +1965,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2026-04-19T13:50:10.715Z">
+                            <time datetime="2026-04-19T14:51:12.764Z">
                                 19/04/2026
                             </time>
                         
@@ -2383,6 +2150,32 @@
         
         
         
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./palette--accent.html" data-role="tree-link" data-pjax data-handle="palette">
+                <span>Accent</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
             <a class="Tree-entityLink" href="./palette--variables.html" data-role="tree-link" data-pjax data-handle="palette">
                 <span>Variables</span>
@@ -2539,6 +2332,32 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./space--gap.html" data-role="tree-link" data-pjax data-handle="space">
+                <span>Gap</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./space--margin.html" data-role="tree-link" data-pjax data-handle="space">
                 <span>Margin</span>
                 
@@ -2567,6 +2386,32 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./space--padding.html" data-role="tree-link" data-pjax data-handle="space">
                 <span>Padding</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./space--radius.html" data-role="tree-link" data-pjax data-handle="space">
+                <span>Radius</span>
                 
 
 <div class="Status Status--unlabelled">

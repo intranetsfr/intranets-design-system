@@ -150,7 +150,40 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-9d789cb913cd6508d9f95ff860d3db19-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <p class="Browser-isEmptyNote">No notes defined.</p>
+        <h2 id="sidenav-navigation-latérale">Sidenav (Navigation latérale)</h2>
+<p>Panneau de navigation latérale animé via CSS (transform), contrôlé par <code>aria-hidden</code>.</p>
+<h3 id="structure-html">Structure HTML</h3>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">sidenav</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">drawer</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-color--grey-100&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">&quot;slide-out&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-symbols-outlined&quot;</span>&gt;</span>close<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      Fermer
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- contenu du drawer --&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">drawer</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">&quot;slide-out&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-symbols-outlined&quot;</span>&gt;</span>menu<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      Ouvrir
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- contenu principal --&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">sidenav</span>&gt;</span></code></pre><h3 id="comportement">Comportement</h3>
+<ul>
+<li>Le drawer est <strong>fermé par défaut</strong> (<code>aria-hidden=&quot;true&quot;</code>)</li>
+<li>Tout bouton <code>[data-target=&quot;slide-out&quot;]</code> bascule l’état</li>
+<li>L’animation de slide est gérée en CSS via <code>transform: translateX()</code></li>
+</ul>
+<h3 id="variables-css-utiles">Variables CSS utiles</h3>
+<pre><code class="hljs language-css">sidenav drawer {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">250px</span>;          <span class="hljs-comment">/* largeur du drawer */</span>
+  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1000</span>;
+}</code></pre><h3 id="accessibilité">Accessibilité</h3>
+<ul>
+<li><code>aria-hidden</code> est mis à jour dynamiquement par le JS.</li>
+<li>Prévoir un bouton de fermeture visible à l’intérieur du drawer.</li>
+</ul>
+
         
     </div>
 </div>
@@ -195,21 +228,18 @@
     <code class="Code Code--lang-html hljs">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">sidenav</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">drawer</span> <span class="hljs-attr">hidden</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-color--red-50&quot;</span>&gt;</span>
-
+    <span class="hljs-tag">&lt;<span class="hljs-name">drawer</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-color--grey-100&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">&quot;slide-out&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-symbols-outlined&quot;</span>&gt;</span>menu<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-            Close Sidenav
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-symbols-outlined&quot;</span>&gt;</span>close<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            Fermer
         <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Auto-resizing sidenav<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem, ipsum dolor sit amet consectetur.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding--16&quot;</span>&gt;</span>Navigation latérale<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-padding-left--16 ids-padding-right--16&quot;</span>&gt;</span>Lorem, ipsum dolor sit amet consectetur.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">drawer</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-sidenav-content&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ids-sidenav-content&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">&quot;slide-out&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;material-symbols-outlined&quot;</span>&gt;</span>menu<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-            Open Sidenav
+            Ouvrir
         <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">sidenav</span>&gt;</span></pre>
@@ -616,7 +646,7 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2026-04-19T13:50:10.715Z">
+                            <time datetime="2026-04-19T14:51:12.764Z">
                                 19/04/2026
                             </time>
                         
@@ -802,6 +832,32 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./palette--accent.html" data-role="tree-link" data-pjax data-handle="palette">
+                <span>Accent</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./palette--variables.html" data-role="tree-link" data-pjax data-handle="palette">
                 <span>Variables</span>
                 
@@ -957,6 +1013,32 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./space--gap.html" data-role="tree-link" data-pjax data-handle="space">
+                <span>Gap</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./space--margin.html" data-role="tree-link" data-pjax data-handle="space">
                 <span>Margin</span>
                 
@@ -985,6 +1067,32 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="./space--padding.html" data-role="tree-link" data-pjax data-handle="space">
                 <span>Padding</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="./space--radius.html" data-role="tree-link" data-pjax data-handle="space">
+                <span>Radius</span>
                 
 
 <div class="Status Status--unlabelled">
